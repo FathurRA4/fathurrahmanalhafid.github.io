@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel</title>
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <img
+        class="logo"
+        src="https://raw.githubusercontent.com/FathurRA4/Asset-gambar/main/logo.jpg"
+        height="75"
+        width="75"
+      />
+      <p>Tabel</p>
+      <ul class="navbar">
+        <li>
+          <a href="HalamanUtama.html">Home</a>
+        </li>
+        <li>
+          <a href="form.html">Form</a>
+        </li>
+        <li>
+          <a href="Tabel.html">Tabel</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="table">
+      <h2>
+        Daftar Preferensi <br />
+        Player Genshin Impact
+      </h2>
+      <table class="table2" border="1">
+        <tr>
+          <th>Nickname</th>
+          <th>UID</th>
+          <th>Level Akun</th>
+          <th>Bermain di PC/Mobile</th>
+          <th>Nama Karakter Favorit</th>
+          <th>Senjata Favorit</th>
+          <th>Elemen Favorit</th>
+        </tr>
+
+        <tr>
+          <td>Hazawa-San</td>
+          <td>825654132</td>
+          <td>58</td>
+          <td>Mobile</td>
+          <td>Kamaisato Ayaka</td>
+          <td>Mitsplitter Reforged</td>
+          <td>Cryo</td>
+        </tr>
+        <tr>
+          <td>Minios-nyaa</td>
+          <td>802356987</td>
+          <td>60</td>
+          <td>PC</td>
+          <td>Shenhe</td>
+          <td>Calamity Queller</td>
+          <td>Cryo</td>
+        </tr>
+        <tr>
+          <td>Nero</td>
+          <td>843269854</td>
+          <td>57</td>
+          <td>Mobile</td>
+          <td>Zhongli</td>
+          <td>Aqua Simulacra</td>
+          <td>Anemo</td>
+        </tr>
+        <tr>
+          <td>Claire</td>
+          <td>828743214</td>
+          <td>60</td>
+          <td>PC</td>
+          <td>Raiden Shogun</td>
+          <td>Engulfing Lightning</td>
+          <td>Electro</td>
+        </tr>
+        <tr>
+          <td>Japung</td>
+          <td>888694791</td>
+          <td>53</td>
+          <td>PC</td>
+          <td>Yelan</td>
+          <td>Lost Prayer to the Sacred Winds</td>
+          <td>Hydro</td>
+        </tr>
+        <tr>
+          <td id="nickname"></td>
+          <td id="uid"></td>
+          <td id="level"></td>
+          <td id="device"></td>
+          <td id="character"></td>
+          <td id="weapon"></td>
+          <td id="element"></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      var urlParams = new URLSearchParams(window.location.search);
+      var encodedNickname = urlParams.get("nickname");
+      var encodedUID = urlParams.get("uid");
+      var encodedLevel = urlParams.get("level");
+      var encodedDevice = urlParams.get("device");
+      var encodedCharacter = urlParams.get("character");
+      var encodedWeapon = urlParams.get("weapon");
+      var encodedElement = urlParams.get("element");
+
+      var nickname = decodeURIComponent(encodedNickname);
+      var uid = decodeURIComponent(encodedUID);
+      var level = decodeURIComponent(encodedLevel);
+      var device = decodeURIComponent(encodedDevice);
+      var character = decodeURIComponent(encodedCharacter);
+      var weapon = decodeURIComponent(encodedWeapon);
+      var element = decodeURIComponent(encodedElement);
+
+      document.getElementById("nickname").textContent = nickname;
+      document.getElementById("uid").textContent = uid;
+      document.getElementById("level").textContent = level;
+      document.getElementById("device").textContent = device;
+      document.getElementById("character").textContent = character;
+      document.getElementById("weapon").textContent = weapon;
+      document.getElementById("element").textContent = element;
+    </script>
+  </body>
+  <footer>
+    <p>Hubungi Saya:</p>
+
+    <!--paragraph-->
+    <p>Contact me through the Social Media below:</p>
+    <!--social-->
+    <div class="social-icons">
+      <a href="08877246401"><i class="fa fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/fathurr.ra/"
+        ><i class="fa fa-instagram"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/fathurrahman-al-hafid-a21a7a246/"
+        ><i class="fa fa-linkedin"></i
+      ></a>
+      <a
+        href="https://mobile.facebook.com/fathur.rahman.99?eav=AfbnUJluA5KNpgxe8BdZQ-LFK5xBt5Sx2W-FFYvYczT8Lrx7qMxeRL8lmubGwOCPPV0&paipv=0"
+        ><i class="fa fa-facebook"></i
+      ></a>
+    </div>
+    <!--copyright-->
+    <p class="copyright">Copyright by Fathurrahman Al Hafid 2023</p>
+  </footer>
+</html>
